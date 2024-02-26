@@ -32,7 +32,10 @@ const Reset = () => {
     const { data, error  } = await supabase.auth.updateUser({
       password : datas.password
     })
-    if (data) console.log(data)
+    if (data){
+      console.log(data)
+      router.push('/login')
+    } 
     if (error) console.log(error)
   }
 
